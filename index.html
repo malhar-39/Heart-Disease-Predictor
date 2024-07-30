@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <h2>Heart Disease Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br>
+        <label for="gender">Gender (1 = male, 0 = female):</label>
+        <input type="text" id="gender" name="gender"><br>
+        <label for="chest_pain">Chest Pain Type (0-3):</label>
+        <input type="text" id="chest_pain" name="chest_pain"><br>
+        <label for="resting_bp">Resting Blood Pressure:</label>
+        <input type="text" id="resting_bp" name="resting_bp"><br>
+        <label for="serum_cholesterol">Serum Cholesterol:</label>
+        <input type="text" id="serum_cholesterol" name="serum_cholesterol"><br>
+        <label for="fasting_blood_sugar">Fasting Blood Sugar (1 = true, 0 = false):</label>
+        <input type="text" id="fasting_blood_sugar" name="fasting_blood_sugar"><br>
+        <label for="resting_ecg">Resting ECG Results (0-2):</label>
+        <input type="text" id="resting_ecg" name="resting_ecg"><br>
+        <label for="max_hr">Maximum Heart Rate:</label>
+        <input type="text" id="max_hr" name="max_hr"><br>
+        <label for="exercise_angina">Exercise Induced Angina (1 = yes, 0 = no):</label>
+        <input type="text" id="exercise_angina" name="exercise_angina"><br>
+        <label for="st_depression">ST Depression:</label>
+        <input type="text" id="st_depression" name="st_depression"><br>
+        <label for="slope_st">Slope of ST Segment (0-2):</label>
+        <input type="text" id="slope_st" name="slope_st"><br>
+        <label for="major_vessels">Number of Major Vessels (0-3):</label>
+        <input type="text" id="major_vessels" name="major_vessels"><br>
+        <label for="thalassemia">Thalassemia Type (0-2):</label>
+        <input type="text" id="thalassemia" name="thalassemia"><br>
+        <input type="submit" value="Predict">
+    </form>
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
